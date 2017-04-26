@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cross fit</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<style type="text/css">
+		body{
+			margin: 0;
+			padding: 0;
+			font-family: 'open sans', serif;
+		}
+		header{
+			position: absolute;
+			width: 100%;
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+			margin: 20px 0 0 0;
+		}
+		header a {
+			color: white;
+			display: inline-block;
+			margin-left: 20px;
+			margin-right: 20px;
+			text-decoration: none;
+		}
+		#logo > a{
+			font-size: 20px;
+			font-weight: bold;
+		}
+		#nav a:after{
+			content: "";
+			display: block;
+			width: 0px;
+			height: 2px;
+			margin: auto;
+			background: transparent;
+			transition: width 0.2s ease-in-out , background 0.2s ease-in-out;
+		}
+		#nav a:hover:after{
+			width: 100%;
+			background: white;
+		}
+		.img-top img{
+			width: 100%;
+			height: auto;
+		}
+		.pageno{
+			position: fixed;
+			top: 400px;
+			left: 20px;
+			width: 100px;
+			height: 102px;
+			border-radius: 5px;
+		}
+		.pageno:before,.pageno:after{
+			content: "";
+			display: block;
+			width: 100px;
+			height: 50px;
+			position: relative;
+			background: #333232;
+			border-top-left-radius: 5px;
+			border-top-right-radius: 5px;
+		}
+		.pageno:after{
+			top: -122px;
+			background: #6b6a6a;
+			border-radius: 0px 0px 5px 5px;
+		}
+		.pageno > div:first-child{
+			position: relative;
+		    top: -50px;
+		    font-size: 54px;
+		    color: white;
+		    width: 100px;
+		    height: 102px;
+		    z-index: 1;
+		    display: flex;
+		    justify-content: center;
+		    align-items: center;
+		}
+		.pageno > div:last-child{
+			position: relative;
+			top: -75px;
+			color: white;
+			font-size: 16px;
+			z-index: 1;
+			text-align: center;
+		}
+		.pageno{
+			perspective: 1000;
+		}
+		.img-top{
+			background: url('course-med.jpg') 50% 0% no-repeat; 
+			width: 100%;
+			height: 100vh;
+		}
+		@media(max-width: 530px){
+			header{
+				flex-direction: column;
+			}
+			header > #nav{
+				margin-top: 10px;
+				font-size: 13px;
+			}
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<div id="logo">
+			<a href="">Crossfit</a>
+		</div>
+		<div id="nav">
+			<a href="">Courses</a>
+			<a href="">Get Started</a>
+			<a href="">Certification</a>
+		</div>
+	</header>
+	<div class="img-top">
+	</div>
+	<div class="pageno">
+		<div>01</div>
+		<div>Home</div>
+	</div>
+</body>
+</html>
